@@ -1,14 +1,13 @@
-# 387 First Unique Character in a String
-class Solution:
-    def firstUniqChar(self, s: str) -> int:
+class Solution(object):
+    def firstUniqChar(self, s):
         """
         :type s: str
         :rtype: int
         """
 
-        # Step 1: Count the frequency of each character
+        # Step 1: Recursively count frequencies of characters
         def count_freq(idx, freq):
-            # Base case: reached the end of the string
+            # Base case: reached end of string
             if idx == len(s):
                 return freq
             char = s[idx]
@@ -17,7 +16,7 @@ class Solution:
 
         freq_map = count_freq(0, {})
 
-        # Step 2: Find the first character with frequency 1 recursively
+        # Step 2: Recursively find the first unique character
         def find_first(idx):
             # Base case: reached end of string
             if idx == len(s):
