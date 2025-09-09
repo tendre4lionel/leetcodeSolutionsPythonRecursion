@@ -94,10 +94,9 @@ class Solution(object):
         if not s:
             return True
         
-        if s[0] == 'A':
             # Count total 'A' in the string
-            if s.count('A') >= 2:
-                return False
+        if s.count('A') >= 2:
+            return False
         # Check for three consecutive 'L's anywhere
         if 'LLL' in s:
             return False
@@ -105,10 +104,9 @@ class Solution(object):
         return True
 
 # Example usage:
-# sol = Solution()
+#sol = Solution()
 # print(sol.checkRecord("PPALLP"))  # True
-# print(sol.checkRecord("PPALLL"))  # False
-
+#print(sol.checkRecord("PPALLL"))  # False
 
 
 
